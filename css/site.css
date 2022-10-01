@@ -13,21 +13,8 @@ nav {
     background-color: var(--dark-color);
 }
 
-footer {
-    background-color: var(--dark-color);
-}
-
 h1,h2,h3,h4,h5,h6 {
     color: var(--primary-color);
-}
-
-footer {
-    padding-right: 1rem
-}
-
-footer .social>a {
-    color: var(--white-color);
-    opacity: 0.75;
 }
 
 .bsicon {
@@ -56,10 +43,40 @@ white-space: pre-wrap;
 word-break: break-all;
 word-wrap: break-word;
 }
+ 
+.input {
+    border: 3px #1d5888 solid;
+    margin-top: 1rem;
+    margin: 1rem .5rem .25rem 2rem;
+}
+
+.display {
+    border: 3px #1d5888 solid;
+    margin-top: 1rem;
+    margin: 1rem .5rem .25rem 2rem;
+}
+
+.breakdown {
+    border: 3px #1d5888 solid;
+    margin-top: 1rem;
+    margin: 1rem .5rem .25rem 2rem;
+}
 
 main>.container {
+    margin: 60px, 0, 0, 0;
     padding: 60px 15px 0;
-    margin-bottom: 5rem;
+}
+
+.footer {
+    background-color: var(--dark-color);
+    padding-right: 1rem;
+    margin-top:auto;
+    flex-shrink: 0;
+}
+
+footer .social>a {
+    color: var(--white-color);
+    opacity: 0.75;
 }
 
 footer .social>a:hover{

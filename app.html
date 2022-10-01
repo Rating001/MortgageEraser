@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A Coding Project by Ken Klein</title>
+    <title>Mortgage Eraser: A Coding Project by Ken Klein</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,8 +22,8 @@
 <!-- ==== Nav Section ==== -->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="img/favicon-32x32.png" class="d-inline-block align-text-bottom"
-            alt="Ken Codes Logo" width="30" height="24"> APP NAME</a>
+        <a class="navbar-brand" href="mortgageEraser.html"><img src="img/favicon-32x32.png" class="d-inline-block align-text-bottom"
+            alt="Ken Codes Logo" width="30" height="24"> Mortgage Eraser</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -31,7 +31,7 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav me-auto mb-2 mb-md-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="mortgageEraser.html">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="app.html">The App</a>
@@ -52,7 +52,41 @@
 <!-- ==== Main Section ==== -->
 <main class="flex-shrink-0">
     <div class="container">
-
+        <div class="row mt-5">
+            <div class="col-4 border border-primary border-2 p-3">
+                <div class="row">
+                    <div class="col col-12 mt-1">
+                        Please select the calculator you require:
+                        <select id="calculatorChoice">
+                            <option value="mortgage">Mortgage Calculator</option>
+                            <option value="payoff">Early Payoff</option>
+                        </select>
+                    </div>
+                    <form>
+                        <div class="col">
+                            <label class="mt-4">Loan Amount:</label>
+                            <input class="" type="number" id="loanAmount">
+                        </div>
+                        <div class="col">
+                            <label class="mt-2">Term (Months):</label>
+                            <input type="number" id="loanTerm">
+                        </div>
+                        <div class="col mb-1">
+                            <label class="mt-2">Interest Rate:</label>
+                            <input type="number" id="loanInterest">
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="col-8 border border-primary border-2">
+                There is nothing to display here.
+            </div>
+            <div class="col col-12 breakdown">
+                <div>
+                    <p>Text</p>
+                </div>
+            </div>
+        </div>
     </div>
 </main>
     <!-- ==== Footer Section ==== -->

@@ -37,6 +37,17 @@ h1,h2,h3,h4,h5,h6 {
     color: var(--secondary-color)
 }
 
+.inner-wrapper {
+    width: 100%;
+    /* FLEX */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
 code[class*="language-"],
 pre[class*="language-"] {
 white-space: pre-wrap;
@@ -56,10 +67,11 @@ word-wrap: break-word;
     margin: 1rem .5rem .25rem 2rem;
 }
 
+
+
 .breakdown {
     border: 3px #1d5888 solid;
     margin-top: 1rem;
-    margin: 1rem .5rem .25rem 2rem;
 }
 
 main>.container {

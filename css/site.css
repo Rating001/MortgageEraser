@@ -5,6 +5,10 @@
     --white-color: #dff3e4;
 }
 
+.hide-me {
+    display: none;
+}
+
 body {
     color: var(--dark-color);
 }
@@ -15,6 +19,35 @@ nav {
 
 h1,h2,h3,h4,h5,h6 {
     color: var(--primary-color);
+}
+
+h2 {
+    font-size: 1rem;
+    
+}
+
+.label {
+    display: flex;
+    justify-content: start;
+    text-align: center;
+}
+
+.monthly-payment {
+    color: black;
+}
+
+.data {
+    font-size: 1rem;
+    color: black;
+    display: flex;
+    justify-content: end;
+}
+
+h4 {
+    font-size: 2rem;
+    display: flex;
+    align-content: center;
+    text-align: center;
 }
 
 .bsicon {

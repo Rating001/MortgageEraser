@@ -91,7 +91,7 @@ function print(mortgage) {
         let tableRow = document.importNode(templateRow.content, true);
         let rowCols = tableRow.querySelectorAll("td");
 
-        rowCols[0].textContent = "hello";
+        rowCols[0].textContent = mortgage.month[i];
         rowCols[1].textContent = mortgage.allPayments[i];
         rowCols[2].textContent = mortgage.principalPayments[i];
         rowCols[3].textContent = mortgage.interestPayments[i];

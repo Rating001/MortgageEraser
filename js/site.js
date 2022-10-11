@@ -1,5 +1,5 @@
 function getInput() {
-    document.getElementById('breakdown-table').classList.add("hide-me");
+    document.getElementById('displayTable').classList.add("hide-me");
 
     let mortgage = {};
 
@@ -36,6 +36,7 @@ function interestPrincipalPayment(mortgage) {
     let count = 0;
 
     while (mortgage.currentBalance > 0) {
+        
         if (mortgage.currentBalance >= mortgage.monthlyPayment) {
             mortgage.month.push(mortgage.month[count] + 1);
             mortgage.interestPayments.push(mortgage.currentBalance * (mortgage.loanInterest / 1200));
@@ -86,20 +87,21 @@ function print(mortgage) {
     let tableBody = document.getElementById('breakdown-table');
     let templateRow = document.getElementById('mcTemplate');
     tableBody.innerHTML = "";
+    document.getElementById('displayTable').classList.remove('hide-me');
 
-    for (let i = 0 ; i <= mortgage.allPayments.length ; i++) {
+    for (let i = 0 ; i <= (mortgage.allPayments.length) ; i++) {
         let tableRow = document.importNode(templateRow.content, true);
         let rowCols = tableRow.querySelectorAll("td");
 
         rowCols[0].textContent = mortgage.month[i];
-        rowCols[1].textContent = mortgage.allPayments[i];
-        rowCols[2].textContent = mortgage.principalPayments[i];
-        rowCols[3].textContent = mortgage.interestPayments[i];
-        rowCols[4].textContent = mortgage.totalInterest[i];
-        rowCols[5].textContent = mortgage.balance[i];
+        rowCols[1].textContent = "$" + mortgage.allPayments[i].toFixed(2);
+        rowCols[2].textContent = "$" + mortgage.principalPayments[i].toFixed(2);
+        rowCols[3].textContent = "$" + mortgage.interestPayments[i].toFixed(2);
+        rowCols[4].textContent = "$" + mortgage.totalInterest[i].toFixed(2);
+        rowCols[5].textContent = "$" + mortgage.balance[i].toFixed(2);
 
         tableBody.appendChild(tableRow);
     }
 
-    document.getElementById('displayTable').classList.remove('hide-me');
+
 }

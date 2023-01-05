@@ -1,16 +1,96 @@
-:root{
-    --primary-color: #1d5888;
+.lightMode{
+    --primary-color: rgb(13,110,253);
     --secondary-color: #35cf5b;
     --dark-color: #292929;
-    --white-color: #dff3e4;
+    --second-color: #a1a1a1;
+    --light-color: #f1f1f1;
+    --social-color: #cccccc;
+        
+    --foreground: var(--dark-color);
+    --background: var(--light-color);
+    --background2: var(--second-color);
+
+    transition: all .5s;
+}
+.darkMode{
+    --primary-color: rgb(13,110,253);
+    --secondary-color: #35cf5b;
+    --dark-color: #292929;
+    --darker-color: #5c5c5c;
+    --light-color: #e6e6e6;
+    --social-color: #cccccc;
+
+    --foreground: var(--light-color);
+    --background: var(--dark-color);
+    --background2: var(--darker-color);
+
+    transition: all .5s;
+}
+
+.dark-mode-toggle {
+    background: transparent;
+    cursor: pointer;
+    border:none;
+}
+
+.dark-toggle {
+    fill: var(--background);
+    stroke: var(--foreground);
+    stroke-width: 1;
+    transition: stroke-width, .5s;
+}
+
+.dark-toggle:hover {
+
+    stroke-width: 3;
+    stroke: var(--foreground);
+}
+
+.tryButton {
+    border: 1px solid var(--foreground);
+    background-color:transparent;
+    color:var(--foreground);
+    cursor:pointer;
+    font-size: 1.25rem;
+    transition: background-color .3s ease, color .3s ease;
+}
+
+.tryButton:hover {
+    background-color: var(--foreground);
+    color: var(--background);
 }
 
 .hide-me {
     display: none;
 }
 
+.calculateBtn {
+    border: 1px solid var(--foreground);
+    background-color:transparent;
+    color:var(--foreground);
+    cursor:pointer;
+    font-size: 1.25rem;
+    transition: background-color .3s ease, color .3s ease;
+}
+
+.calculateBtn:hover {
+    background-color: var(--foreground);
+    color: var(--background);
+}
+
 body {
-    color: var(--dark-color);
+    color: var(--foreground);
+    background-color: var(--background);
+}
+
+.table {
+    color: var(--foreground);
+    background-color: var(--background);
+}
+
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: var(--background2);
+    color: var(--foreground);
 }
 
 nav {
@@ -23,7 +103,10 @@ h1,h2,h3,h4,h5,h6 {
 
 h2 {
     font-size: 1rem;
-    
+}
+
+.title {
+    font-size: 1.5rem;
 }
 
 .label {
@@ -33,13 +116,14 @@ h2 {
 }
 
 .monthly-payment {
-    color: black;
+    color: var(--primary-color);
 }
 
 .data {
     font-size: 1rem;
-    color: black;
+    color: var(--primary-color);
     display: flex;
+    font-weight: 500;
     justify-content: end;
 }
 
@@ -70,6 +154,14 @@ h4 {
     color: var(--secondary-color)
 }
 
+.dim {
+    opacity: 25%;
+}
+
+.selectorText {
+    font-size: 0.8rem;
+}
+
 .inner-wrapper {
     width: 100%;
     /* FLEX */
@@ -87,7 +179,12 @@ white-space: pre-wrap;
 word-break: break-all;
 word-wrap: break-word;
 }
- 
+
+.codeBlock {
+    overflow:scroll;
+    height: 74vh;
+}
+
 .input {
     border: 3px #1d5888 solid;
     margin-top: 1rem;
@@ -100,31 +197,40 @@ word-wrap: break-word;
     margin: 1rem .5rem .25rem 2rem;
 }
 
-
-
 .breakdown {
-    border: 3px #1d5888 solid;
+    border: 3px rgb(13,110,253) solid;
     margin-top: 1rem;
 }
 
 main>.container {
     margin: 60px, 0, 0, 0;
+    margin-bottom: 4rem;
     padding: 60px 15px 0;
+    padding-bottom: 4rem;
 }
 
-.footer {
+footer {
+    position:fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    padding-top: 0.625rem;
+    padding-bottom: 0.3125rem;
+    padding-right: .5rem;
     background-color: var(--dark-color);
-    padding-right: 1rem;
-    margin-top:auto;
-    flex-shrink: 0;
 }
 
 footer .social>a {
-    color: var(--white-color);
+    color: var(--social-color);
     opacity: 0.75;
 }
 
 footer .social>a:hover{
     opacity: 0.90;
     color: var(--secondary-color)
+}
+
+.kenCodes {
+    cursor: pointer;
 }
